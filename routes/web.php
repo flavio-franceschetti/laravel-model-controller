@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, 'index'])->name('movies');
+Route::get('/bestMovies', [PageController::class, 'bestMoviesFilter'])->name('bestMovies');
+Route::get('/movieDetails/{id}', [PageController::class, 'show'])->name('movieDetails');

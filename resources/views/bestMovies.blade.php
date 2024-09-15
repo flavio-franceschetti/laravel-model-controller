@@ -5,7 +5,7 @@
 
 @section('content')
     <div class="container my-5">
-        <h1>Movies</h1>
+        <h1>Best Movies</h1>
         <div class="d-flex flex-wrap gap-3">
 
             @foreach ($movies as $movie)
@@ -19,40 +19,13 @@
                         <p class="card-text mb-0">Data di uscita: {{ $movie->date }}</p>
                         <p class="card-text mb-0">Voto: {{ $movie->vote }}</p>
                         <a class="btn btn-primary" href="{{ route('movieDetails', ['id' => $movie->id]) }}">Details</a>
+
                     </div>
                 </div>
             @endforeach
-        </div>
+        @endsection
 
 
-        {{-- <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Title</th>
-            <th scope="col">Original Title</th>
-            <th scope="col">Nationality</th>
-            <th scope="col">Date</th>
-            <th scope="col">Vote</th>
-          </tr>
-        </thead>
-        <tbody>
-            @foreach ($movies as $movie)
-                <tr>
-                    <td>{{ $movie->id }}</td>
-                    <td>{{ $movie->title }}</td>
-                    <td>{{ $movie->original_title }}</td>
-                    <td>{{ $movie->nationality }}</td>
-                    <td>{{ $movie->date }}</td>
-                    <td>{{ $movie->vote }}</td>
-                </tr>
-            @endforeach
-        </tbody>
-      </table> --}}
-    </div>
-@endsection
-
-
-@section('titlePage')
-    Movies
-@endsection
+        @section('titlePage')
+            Best Movies
+        @endsection
